@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="collective.js.alohaeditor">
+
+  <browser:resourceDirectory
+    name="collective.js.alohaeditor"
+    directory="resources"
+    />
+
+  <include file="upgrades.zcml"/>
+
+  <genericsetup:registerProfile
+      name="default"
+      title="collective.js.alohaeditor"
+      directory="profiles/default"
+      description='Extension profile for collective.js.alohaeditor.'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>
